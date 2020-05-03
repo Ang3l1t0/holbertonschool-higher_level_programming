@@ -13,3 +13,19 @@ At the end of this project, you are expected to be able to explain to anyone, wi
     How to use strings
     What are indexing and slicing in Python
     What is the official Holberton Python coding style and how to check your code with PEP 8
+ 
+## 0. Run Python file mandatory
+Score: 100.00% (Checks completed: 100.00%)
+
+Write a Shell script that runs a Python script.
+
+The Python file name will be saved in the environment variable $PYFILE
+
+``` guillaume@ubuntu:~/py/0x00$ cat main.py 
+    #!/usr/bin/python3
+    print("Holberton School")
+
+    guillaume@ubuntu:~/py/0x00$ export PYFILE=main.py
+    guillaume@ubuntu:~/py/0x00$ ./0-run
+    Holberton School
+    guillaume@ubuntu:~/py/0x00$ ``
