@@ -27,13 +27,19 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        square_list = []
-        print('\n' * self.__position[1], end="")
-        for i in range(self.__size):
-            square_list.append((' ' * self.__position[0]) +
-                               ('#' * self.__size))
-
-        print(*square_list, sep="\n")
+        if self.size > 0:
+            if self.position[1] > 0:
+                for newline in range(self.position[1]):
+                    print("")
+            for row in range(self.size):
+                if self.position[0] > 0:
+                    for spaces in range(self.position[0]):
+                        print(" ", end="")
+                for collumn in range(self.size):
+                    print("#", end="")
+                print("")
+        else:
+            print("")
 
     @property
     def size(self):
