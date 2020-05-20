@@ -29,7 +29,7 @@ class Square:
     def my_print(self):
         square_list = []
         if self.__position[1] > 0:
-            print('\n' * self.__position[1], end="")
+            print(' ' * self.__position[1], end="")
         for i in range(self.__size):
             square_list.append(' ' * self.__position[0] +
                                '#' * self.__size)
