@@ -1,22 +1,34 @@
 #!/usr/bin/python3
-"""text_indentation"""
+"""text_indentation
+"""
 
 
 def text_indentation(text):
-    """text_indentation
+    '''This function prints with indentation.
+    - text {str} will be printed with indentations'''
+    if not isinstance(text, str):
+        raise TypeError('text must be a string')
+    ar = []
+    con = text.count('.')
+    con += text.count(':')
+    con += text.count('?')
+    tripper = 0
+    for x in range(con):
+        ar.append([])
+        for y in range(tripper, len(text)):
+            if y == 0:
+                y += tripper
+            ar[x].append(text[y])
+            if text[y] in '.?:':
+                tripper = y + 1
+                ar[x].append('\n\n')
+                break
+    for x in range(len(ar)):
+        for i in range(len(ar[x])):
+            if ar[x][i] == ' ':
+                ar[x].pop(i)
+            else:
+                break
 
-    Arguments:
-        text {str} -- text that will be indent
-
-    Raises:
-        TypeError: text must be a string
-    """
-    ch = [".", "?", ":"]
-    if type(text) is not str:
-        raise TypeError("text must be a string")
-    else:
-        for element in range(len(text)):
-            if text[element] is not " ":
-                print(text[element], end="")
-            if text[element] in ch:
-                print("\n")
+    for x in ar:
+        print(*x, sep="", end="")
