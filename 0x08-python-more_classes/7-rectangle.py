@@ -6,11 +6,16 @@
 class Rectangle:
     """Rectangle class
     """
+
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """initialize class
         """
         self.__width = width
         self.__height = height
+        Rectangle.number_of_instances += 1
 
     # width
     @property
@@ -69,8 +74,20 @@ class Rectangle:
         """
         if self.height == 0 or self.width == 0:
             return ("")
-        w = "#" * self.width
+        w = str(self.print_symbol) * self.width
         printed = w
         for _i in range(self.height-1):
             printed += "\n" + w
         return (printed)
+
+    def __repr__(self):
+        """Get string evaluation of rectangle
+        """
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
+
+    def __del__(self):
+        """Action taken when instance is deleted
+        """
+        if Rectangle.number_of_instances > 0:
+            Rectangle.number_of_instances -= 1
+            print("Bye rectangle...")

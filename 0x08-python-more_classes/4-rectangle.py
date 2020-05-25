@@ -74,3 +74,7 @@ class Rectangle:
         for _i in range(self.height-1):
             printed += "\n" + w
         return (printed)
+
+    def __repr__(self):
+        """Get string evaluation of rectangle."""
+        return ("Rectangle({}, {})".format(self.__width, self.__height))

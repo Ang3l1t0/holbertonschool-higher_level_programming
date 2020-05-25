@@ -74,3 +74,13 @@ class Rectangle:
         for _i in range(self.height-1):
             printed += "\n" + w
         return (printed)
+
+    def __repr__(self):
+        """Get string evaluation of rectangle
+        """
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
+
+    def __del__(self):
+        """Action taken when instance is deleted
+        """
+        print("Bye rectangle...")
