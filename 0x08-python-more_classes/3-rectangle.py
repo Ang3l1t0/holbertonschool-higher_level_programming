@@ -13,7 +13,7 @@ class Rectangle:
     # width
     @property
     def width(self):
-        return self.__width
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -26,7 +26,7 @@ class Rectangle:
     # heigth
     @property
     def height(self):
-        return self.__height
+        return (self.__height)
 
     @height.setter
     def height(self, value):
@@ -51,5 +51,29 @@ class Rectangle:
             int -- perimeter of a rectangle
         """
         if self.height == 0 or self.width == 0:
-            return 0
+            return (0)
         return (self.height + self.width) * 2
+
+    def __str__(self):
+        if self.height == 0 or self.width == 0:
+            return ("")
+        w = "#" * self.width
+        printed = w
+        for _i in range(self.height-1):
+            printed += "\n" + w
+        return (printed)
+
+
+
+    # for row in matrix:
+    #     new_row = []
+    #     if type(row) is not list:
+    #         raise TypeError(m_error)
+    #     elif length != len(row):
+    #         raise TypeError("Each row of the matrix must have the same size")
+    #     for element in row:
+    #         if type(element) not in (int, float):
+    #             raise TypeError(m_error)
+    #         new_row.append(round(element/div, 2))
+    #     new_matrix.append(new_row)
+    # return(new_matrix)
