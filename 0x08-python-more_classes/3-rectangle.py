@@ -62,18 +62,3 @@ class Rectangle:
         for _i in range(self.height-1):
             printed += "\n" + w
         return (printed)
-
-
-
-    # for row in matrix:
-    #     new_row = []
-    #     if type(row) is not list:
-    #         raise TypeError(m_error)
-    #     elif length != len(row):
-    #         raise TypeError("Each row of the matrix must have the same size")
-    #     for element in row:
-    #         if type(element) not in (int, float):
-    #             raise TypeError(m_error)
-    #         new_row.append(round(element/div, 2))
-    #     new_matrix.append(new_row)
-    # return(new_matrix)
