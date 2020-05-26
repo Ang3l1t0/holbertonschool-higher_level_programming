@@ -109,3 +109,7 @@ class Rectangle:
         r_area1, r_area2 = rect_1.area(), rect_2.area
         if r_area1 == r_area2:
             return rect_1
+        elif rect_1 > rect_2:
+            return rect_1
+        else:
+            rect_2
