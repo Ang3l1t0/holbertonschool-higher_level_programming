@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Locked Class
 """
+
+
 class LockedClass:
     """locked class
     """
