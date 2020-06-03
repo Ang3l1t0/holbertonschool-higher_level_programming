@@ -29,20 +29,15 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle class
-
-    Arguments:
-        BaseGeometry {class}
-    """
+    """Represent a rectangle using BaseGeometry."""
 
     def __init__(self, width, height):
-        """initialize
-
-        Arguments:
-            width {int} -- width
-            height {int} -- height
+        """Intialize a new Rectangle.
+        Args:
+            width (int): The width of the new Rectangle.
+            height (int): The height of the new Rectangle.
         """
+        self.integer_validator("width", width)
         self.__width = width
+        self.integer_validator("height", height)
         self.__height = height
-        Rectangle.integer_validator(self, "width", width)
-        Rectangle.integer_validator(self, "height", height)
