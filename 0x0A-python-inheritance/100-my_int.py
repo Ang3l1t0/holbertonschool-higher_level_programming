@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""Class MyInt
+"""
+
+
 class MyInt(int):
     """invert a value
     """
