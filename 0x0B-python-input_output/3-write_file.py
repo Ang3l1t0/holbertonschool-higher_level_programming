@@ -13,7 +13,7 @@ def write_file(filename="", text=""):
     Returns:
         [type] -- [description]
     """
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding="UTF8") as f:
         out = f.write(text)
     f.closed
     return (out)
