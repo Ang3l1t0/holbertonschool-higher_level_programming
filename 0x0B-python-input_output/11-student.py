@@ -4,7 +4,6 @@
 Returns:
     json -- dictionary representation of a Student instance
 """
-class_to_json = __import__('10-class_to_json').class_to_json
 
 
 class Student:
@@ -21,4 +20,4 @@ class Student:
     def to_json(self):
         """to_json method
         """
-        return class_to_json(self)
+        return self.__dict__
