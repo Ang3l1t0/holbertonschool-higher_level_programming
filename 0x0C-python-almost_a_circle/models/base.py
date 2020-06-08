@@ -82,5 +82,5 @@ class Base:
             for a, _b in enumerate(new_lst):
                 new_lst[a] = cls.create(**new_lst[a])
         except:
-            pass 
+            pass
         return new_lst
