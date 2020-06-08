@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """model Base"""
-from json import dumps
+from json import dumps, loads
 
 
 class Base:
@@ -41,3 +41,41 @@ class Base:
                 new_lst += [list_objs[x].to_dictionary()]
         with open(cls.__name__ + ".json", 'w') as f:
             f.write(cls.to_json_string(new_lst))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """from json to string
+
+        Args:
+            json_string ([type]): [description]
+
+        Returns:
+            [type]: [description]
+        """
+        if json_string is None or not json_string:
+            return []
+        else:
+            return loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        new_file = cls.__name__ + ".json"
+        new_lst = []
+        try:
+            with open(new_file, 'r') as f:
+                new_lst = cls.from_json_string(f.read())
+            for a, b in enumerate(new_lst):
+                new_lst[a] = cls.create(**new_lst[a])
+        except:
+            pass 
+        return new_lst
