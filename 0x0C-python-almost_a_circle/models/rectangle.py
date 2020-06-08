@@ -143,8 +143,35 @@ class Rectangle(Base):
     def display(self):
         """display method
         """
-        w = "#" * self.width
-        printed = w
-        for _i in range(self.height-1):
-            printed += "\n" + w
-        print(printed)
+        s = '\n' * self.y + \
+            (' ' * self.x + '#' * self.width + '\n') * self.height
+        print(s, end='')
+
+    def __str__(self):
+        """str method
+        """
+        return "[{}] ({}) {}/{} - {}/{}\
+            ".format(type(self).__name__, self.id, self.x, self.y, self.width,
+                     self.height)
+
+    def arg_update(self, id=None, width=None, height=None, x=None, y=None):
+        """arg_update - upgrade instance attribute via *args
+        """
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        """update method
+        """
+        if args:
+            self.arg_update(*args)
+        elif kwargs:
+            self.arg_update(**kwargs)
