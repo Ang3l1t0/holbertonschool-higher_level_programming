@@ -10,9 +10,6 @@ Raises:
     ValueError: [x must be >= 0]
     TypeError: [y must be an integer]
     ValueError: [y must be >= 0]
-
-Returns:
-    [type]: [description]
 """
 from models.base import Base
 
@@ -149,6 +146,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """str method
+
+        Returns:
+            str: Returns string info about this rectangle.
         """
         return "[{}] ({}) {}/{} - {}/{}\
             ".format(type(self).__name__, self.id, self.x, self.y, self.width,
