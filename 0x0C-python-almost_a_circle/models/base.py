@@ -69,12 +69,17 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """load_from method
+
+        Returns:
+            [list]: list of instance
+        """
         new_file = cls.__name__ + ".json"
         new_lst = []
         try:
             with open(new_file, 'r') as f:
                 new_lst = cls.from_json_string(f.read())
-            for a, b in enumerate(new_lst):
+            for a, _b in enumerate(new_lst):
                 new_lst[a] = cls.create(**new_lst[a])
         except:
             pass 
