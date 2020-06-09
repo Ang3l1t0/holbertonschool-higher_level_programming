@@ -150,9 +150,14 @@ class Rectangle(Base):
         Returns:
             str: Returns string info about this rectangle.
         """
-        return "[{}] ({}) {}/{} - {}/{}\
-            ".format(type(self).__name__, self.id, self.x, self.y, self.width,
-                     self.height)
+        return "[{}] ({}) {}/{} - {}/{}".format(
+            type(self).__name__,
+            self.id,
+            self.x,
+            self.y,
+            self.width,
+            self.height
+        )
 
     def arg_update(self, id=None, width=None, height=None, x=None, y=None):
         """arg_update - upgrade instance attribute via *args
