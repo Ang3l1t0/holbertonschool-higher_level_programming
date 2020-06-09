@@ -28,9 +28,12 @@ class Square(Rectangle):
         Returns:
             str: Returns string info about this square.
         """
-        return "[{}] ({}) {}/{} - {}\
-            ".format(type(self).__name__, self.id, self.x, self.y,
-                     self.width)
+        return "[{}] ({}) {}/{} - {}".format(
+            type(self).__name__,
+            self.id, self.x,
+            self.y,
+            self.width
+        )
 
     @property
     def size(self):
