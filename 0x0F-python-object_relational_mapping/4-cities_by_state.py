@@ -15,8 +15,9 @@ if __name__ == "__main__":
 
     cur = conn.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC",
-        (argv[4], ))
+        "SELECT cities.id, cities.name, states.name FROM states\
+        INNER JOIN cities ON states.id=cities.state_id ORDER BY id ASC"
+    )
     rows = cur.fetchall()
     for row in rows:
         print(row)
