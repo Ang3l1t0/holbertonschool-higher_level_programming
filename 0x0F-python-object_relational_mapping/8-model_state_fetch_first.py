@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""prints the first State object from the database      """
+"""prints the first State object from the database"""
 
 from sys import argv
 from model_state import Base, State
@@ -17,7 +17,9 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    for state in session.query(State).all():
-        if state.id == 1:
-            print("{}: {}".format(state.id, state.name))
+    state = session.query(State).get(1)
+    if state:
+        print("{}: {}".format(state.id, state.name))
+    else:
+        print("Nothing")
     session.close()
