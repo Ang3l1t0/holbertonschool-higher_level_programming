@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Search API"""
 import requests
 from sys import argv
