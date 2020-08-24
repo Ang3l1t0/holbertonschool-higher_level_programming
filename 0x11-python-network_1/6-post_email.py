@@ -4,8 +4,9 @@
 import requests
 from sys import argv
 
-url = argv[1]
-my_obj = {'email': argv[2]}
+if __name__ == "__main__":
+    url = argv[1]
+    my_obj = {'email': argv[2]}
 
-r = requests.post(url, data=my_obj)
-print r.text
+    r = requests.post(url, data=my_obj)
+    print r.text
