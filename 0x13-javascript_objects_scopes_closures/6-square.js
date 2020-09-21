@@ -14,4 +14,5 @@ class Square extends SquareBase {
   }
 }
 
-module.exports = Square;
+const SquareO = Square;
+module.exports = SquareO;
