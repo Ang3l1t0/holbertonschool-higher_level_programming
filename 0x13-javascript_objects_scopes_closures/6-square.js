@@ -6,7 +6,7 @@ class Square extends SquareBase {
   charPrint (c) {
     if (typeof c !== 'undefined') {
       for (let i = 0; i < this.height; i++) {
-        console.log('C'.repeat(this.width));
+        console.log('C'.repeat(this.height));
       }
     } else {
       super.print();
