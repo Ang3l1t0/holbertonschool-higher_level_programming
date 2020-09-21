@@ -1,6 +1,6 @@
 # 0x13. Javascript - Objects, Scopes and Closures
 
-### Resources 🔧
+## Resources 🔧
 
 - [JavaScript object basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
 
@@ -27,7 +27,7 @@
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-## General 📌
+### General 📌
 
 - Why Javascript programming is amazing (don’t forget to tweet today, with the hashtag #javascriptisamazing :))
 - How to create an object in Javascript
@@ -39,6 +39,8 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - How to inherit an object from another
 
 ## Requirements
+
+### General 📌
 
 - Allowed editors: vi, vim, emacs
 - All your files will be interpreted on Ubuntu 14.04 LTS using node (version 10.14.x)
