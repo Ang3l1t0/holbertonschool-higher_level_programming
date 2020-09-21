@@ -6,7 +6,7 @@ class Square extends SquareBase {
   charPrint (c) {
     if (typeof c !== 'undefined') {
       for (let i = 0; i < this.height; i++) {
-        console.log('C'.repeat(this.height));
+        console.log(c.repeat(this.height));
       }
     } else {
       super.print();
@@ -14,5 +14,5 @@ class Square extends SquareBase {
   }
 }
 
-const SquareO = Square;
-module.exports = SquareO;
+module.exports = Square;
+        
